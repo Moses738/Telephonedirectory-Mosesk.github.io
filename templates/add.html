@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+
+{% block container %}
+<center><form action="{{ url_for('add')}}" method="post">
+
+Name : <input type="text" name="name" id="myInput" onkeyup="myFunction()" placeholder="Type name...."><br><br>
+contact: <input type="text" name = "number" id="myInput" onkeyup="myFunction()" placeholder="Type number...."><br><br>
+
+<input type="submit" class="btn btn-secondary btn-sm" value="Add">
+
+</center>
+{% endblock %}
+</form>

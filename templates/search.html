@@ -1,0 +1,60 @@
+{% extends "index.html" %}
+
+{% block container %}
+<center><body>
+
+<form action="{{ url_for('search')}}" method="post">
+Name : <input type="text" name="name" id="myInput" onkeyup="myFunction()" placeholder="Search for name.."><br><br>
+<input type="submit" class="btn btn-secondary btn-sm">
+</form>
+<table class="table table-sm table-dark">
+  <thead>
+    <tr class="bg-danger"">
+      <th class="bg-danger"><h5> Name </h5></th>
+      <th class="bg-danger"><h5> Contact </h5></th>
+    </tr>
+  <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tbody>
+    {% if name in dict.keys() %}
+    <tr>
+    <td class="bg-success"><h6>{{name}}</h6></td><br>
+    <td class="bg-success"><h6>{{dict[name]}}</h6</td>
+<script>
+      function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+</script>
+
+    {% endif %}
+    </tr>
+  </tbody>
+</thead>
+</table>
+
+</body>
+
+</center>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% block container %}
+<center>
+
+<table class="table table-dark">
+   <thead>
+     <tr class="bg-danger">
+       <th class="bg-danger"> Name</th>
+       <th class="bg-danger"> Contact </th>
+     </tr>
+  <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+  <tbody>
+      {% for i,j in dict.items() %}
+        {% if i != none and j != none %}
+        <tr>
+            <td class="bg-success">{{i}}</td><br>
+          <td class="bg-success">{{j}}</td>
+        </tr>
+    </tbody>
+        {% endif %}
+      {% endfor %}
+      </thead>
+  </table>
+</center>
+{% endblock %}

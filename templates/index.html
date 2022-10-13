@@ -1,0 +1,45 @@
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+
+<!DOCTYPE html>
+<head>
+  <style media="screen">
+
+  </style>
+</head>
+
+<br><br><br>
+<center>
+  <h1 style="color:blockquote;"><b>Telephone Directory</b></h1>
+  <img src="static/tele.gif" alt="HTML5 Icon" style="width:128px;height:128px;"><br><br>
+
+  </center>
+<center>
+  <head>
+  <style>
+  body {
+    background-color: #DBF9FC;
+  }
+  </style>
+  </head>
+
+<center>
+<body>
+
+</body>
+<a href="{{url_for('add')}}">
+  <button type="button" class="btn btn-primary btn-lg"> ADD </button>
+</a>
+<a href="{{url_for('display')}}">
+  <button type="button" class="btn btn-secondary btn-lg"> DISPLAY</button>
+</a>
+<a href="{{url_for('search')}}">
+<button type="button" class="btn btn-primary btn-lg"> SEARCH </button>
+</a>
+</center><br><br>
+{% block container %}
+
+{% endblock %}
